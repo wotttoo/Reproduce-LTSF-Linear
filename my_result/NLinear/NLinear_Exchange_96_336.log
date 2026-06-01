@@ -1,0 +1,70 @@
+Args in experiment:
+Namespace(activation='gelu', batch_size=32, c_out=7, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='exchange_rate.csv', dec_in=7, des='Exp', devices='0,1,2,3', distil=True, do_predict=False, dropout=0.05, e_layers=2, embed='timeF', embed_type=0, enc_in=8, factor=1, features='M', freq='h', gpu=0, individual=False, is_training=1, itr=1, label_len=48, learning_rate=0.0005, loss='mse', lradj='type1', model='NLinear', model_id='Exchange_96_336', moving_avg=25, n_heads=8, num_workers=10, output_attention=False, patience=3, pred_len=336, root_path='./dataset/', seq_len=96, target='OT', test_flop=False, train_epochs=10, train_only=False, use_amp=False, use_gpu=False, use_multi_gpu=False)
+Use CPU
+>>>>>>>start training : Exchange_96_336_NLinear_custom_ftM_sl96_ll48_pl336_dm512_nh8_el2_dl1_df2048_fc1_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 4880
+val 425
+test 1182
+	iters: 100, epoch: 1 | loss: 0.4266970
+	speed: 0.0042s/iter; left time: 6.0142s
+Epoch: 1 cost time: 0.5898337364196777
+Epoch: 1, Steps: 152 | Train Loss: 0.4332822 Vali Loss: 0.3913648 Test Loss: 0.3215358
+Validation loss decreased (inf --> 0.391365).  Saving model ...
+Updating learning rate to 0.0005
+	iters: 100, epoch: 2 | loss: 0.4387902
+	speed: 0.0115s/iter; left time: 14.5379s
+Epoch: 2 cost time: 0.642963171005249
+Epoch: 2, Steps: 152 | Train Loss: 0.4269693 Vali Loss: 0.3855113 Test Loss: 0.3248134
+Validation loss decreased (0.391365 --> 0.385511).  Saving model ...
+Updating learning rate to 0.00025
+	iters: 100, epoch: 3 | loss: 0.4322354
+	speed: 0.0107s/iter; left time: 11.9969s
+Epoch: 3 cost time: 0.6501376628875732
+Epoch: 3, Steps: 152 | Train Loss: 0.4261081 Vali Loss: 0.3862517 Test Loss: 0.3283830
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 0.000125
+	iters: 100, epoch: 4 | loss: 0.2812795
+	speed: 0.0109s/iter; left time: 10.4757s
+Epoch: 4 cost time: 0.5734102725982666
+Epoch: 4, Steps: 152 | Train Loss: 0.4257005 Vali Loss: 0.3868094 Test Loss: 0.3286077
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 6.25e-05
+	iters: 100, epoch: 5 | loss: 0.4530980
+	speed: 0.0114s/iter; left time: 9.2555s
+Epoch: 5 cost time: 0.5704443454742432
+Epoch: 5, Steps: 152 | Train Loss: 0.4245083 Vali Loss: 0.3848695 Test Loss: 0.3294429
+Validation loss decreased (0.385511 --> 0.384870).  Saving model ...
+Updating learning rate to 3.125e-05
+	iters: 100, epoch: 6 | loss: 0.3400629
+	speed: 0.0109s/iter; left time: 7.1865s
+Epoch: 6 cost time: 0.6826310157775879
+Epoch: 6, Steps: 152 | Train Loss: 0.4249827 Vali Loss: 0.3856946 Test Loss: 0.3288386
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 1.5625e-05
+	iters: 100, epoch: 7 | loss: 0.4564694
+	speed: 0.0119s/iter; left time: 6.0550s
+Epoch: 7 cost time: 0.8327221870422363
+Epoch: 7, Steps: 152 | Train Loss: 0.4252137 Vali Loss: 0.3848639 Test Loss: 0.3286128
+Validation loss decreased (0.384870 --> 0.384864).  Saving model ...
+Updating learning rate to 7.8125e-06
+	iters: 100, epoch: 8 | loss: 0.4292647
+	speed: 0.0121s/iter; left time: 4.3282s
+Epoch: 8 cost time: 0.6868753433227539
+Epoch: 8, Steps: 152 | Train Loss: 0.4249975 Vali Loss: 0.3853465 Test Loss: 0.3285891
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 3.90625e-06
+	iters: 100, epoch: 9 | loss: 0.3691802
+	speed: 0.0122s/iter; left time: 2.5024s
+Epoch: 9 cost time: 0.6547458171844482
+Epoch: 9, Steps: 152 | Train Loss: 0.4255147 Vali Loss: 0.3849210 Test Loss: 0.3286092
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 1.953125e-06
+	iters: 100, epoch: 10 | loss: 0.3782307
+	speed: 0.0114s/iter; left time: 0.6044s
+Epoch: 10 cost time: 0.7498297691345215
+Epoch: 10, Steps: 152 | Train Loss: 0.4254026 Vali Loss: 0.3866615 Test Loss: 0.3286479
+EarlyStopping counter: 3 out of 3
+Early stopping
+>>>>>>>testing : Exchange_96_336_NLinear_custom_ftM_sl96_ll48_pl336_dm512_nh8_el2_dl1_df2048_fc1_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 1182
+mse:0.32866522669792175, mae:0.41370323300361633

@@ -1,0 +1,46 @@
+Args in experiment:
+Namespace(activation='gelu', batch_size=32, c_out=7, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='exchange_rate.csv', dec_in=7, des='Exp', devices='0,1,2,3', distil=True, do_predict=False, dropout=0.05, e_layers=2, embed='timeF', embed_type=0, enc_in=8, factor=1, features='M', freq='h', gpu=0, individual=False, is_training=1, itr=1, label_len=48, learning_rate=0.0005, loss='mse', lradj='type1', model='NLinear', model_id='Exchange_720_720', moving_avg=25, n_heads=8, num_workers=10, output_attention=False, patience=3, pred_len=720, root_path='./dataset/', seq_len=720, target='OT', test_flop=False, train_epochs=10, train_only=False, use_amp=False, use_gpu=False, use_multi_gpu=False)
+Use CPU
+>>>>>>>start training : Exchange_720_720_NLinear_custom_ftM_sl720_ll48_pl720_dm512_nh8_el2_dl1_df2048_fc1_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 3872
+val 41
+test 798
+	iters: 100, epoch: 1 | loss: 0.8283976
+	speed: 0.0099s/iter; left time: 11.0358s
+Epoch: 1 cost time: 1.1650006771087646
+Epoch: 1, Steps: 121 | Train Loss: 0.7673432 Vali Loss: 1.2832613 Test Loss: 0.9751840
+Validation loss decreased (inf --> 1.283261).  Saving model ...
+Updating learning rate to 0.0005
+	iters: 100, epoch: 2 | loss: 0.8269975
+	speed: 0.0146s/iter; left time: 14.4793s
+Epoch: 2 cost time: 1.063584327697754
+Epoch: 2, Steps: 121 | Train Loss: 0.7499216 Vali Loss: 1.3980448 Test Loss: 1.0310327
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 0.00025
+	iters: 100, epoch: 3 | loss: 0.7185014
+	speed: 0.0154s/iter; left time: 13.4137s
+Epoch: 3 cost time: 1.0399224758148193
+Epoch: 3, Steps: 121 | Train Loss: 0.7418583 Vali Loss: 1.2043517 Test Loss: 0.9229133
+Validation loss decreased (1.283261 --> 1.204352).  Saving model ...
+Updating learning rate to 0.000125
+	iters: 100, epoch: 4 | loss: 0.7433598
+	speed: 0.0157s/iter; left time: 11.7392s
+Epoch: 4 cost time: 1.1278564929962158
+Epoch: 4, Steps: 121 | Train Loss: 0.7394760 Vali Loss: 1.2826270 Test Loss: 1.0062617
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 6.25e-05
+	iters: 100, epoch: 5 | loss: 0.7467914
+	speed: 0.0146s/iter; left time: 9.1853s
+Epoch: 5 cost time: 0.9240567684173584
+Epoch: 5, Steps: 121 | Train Loss: 0.7362507 Vali Loss: 1.2362517 Test Loss: 1.0141383
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 3.125e-05
+	iters: 100, epoch: 6 | loss: 0.7603515
+	speed: 0.0139s/iter; left time: 7.0532s
+Epoch: 6 cost time: 0.9563491344451904
+Epoch: 6, Steps: 121 | Train Loss: 0.7356628 Vali Loss: 1.2448958 Test Loss: 1.0231135
+EarlyStopping counter: 3 out of 3
+Early stopping
+>>>>>>>testing : Exchange_720_720_NLinear_custom_ftM_sl720_ll48_pl720_dm512_nh8_el2_dl1_df2048_fc1_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 798
+mse:0.9241309762001038, mae:0.7229394316673279
